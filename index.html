@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jafar Bhathiyara - Software Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-gray-200 font-poppins transition-colors duration-300">
+    <!-- Sidebar Navigation -->
+    <nav class="fixed top-0 left-0 h-full w-20 md:w-64 bg-gradient-to-b from-gray-800 to-gray-900 flex flex-col items-center py-8 z-50 transition-all duration-300" id="sidebar">
+        <div class="text-2xl font-bold text-cyan-400 mb-12 animate-bounce">Jafar</div>
+        <ul class="space-y-6 text-center">
+            <li><a href="#home" class="nav-link"><i class="fas fa-home mr-2 md:inline hidden"></i><span class="md:inline hidden">Home</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-user mr-2 md:inline hidden"></i><span class="md:inline hidden">About</span></a></li>
+            <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase mr-2 md:inline hidden"></i><span class="md:inline hidden">Experience</span></a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram mr-2 md:inline hidden"></i><span class="md:inline hidden">Projects</span></a></li>
+            <li><a href="#tech" class="nav-link"><i class="fas fa-code mr-2 md:inline hidden"></i><span class="md:inline hidden">Tech</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope mr-2 md:inline hidden"></i><span class="md:inline hidden">Contact</span></a></li>
+        </ul>
+        <button class="text-gray-400 hover:text-cyan-400 mt-6" id="mode-toggle"><i class="fas fa-moon"></i></button>
+        <button class="md:hidden text-gray-400 hover:text-cyan-400 mt-auto" id="toggle-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-20 md:ml-64">
+        <!-- Home Section -->
+        <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-purple-900 relative">
+            <div id="particles-js" class="absolute inset-0"></div>
+            <div class="text-center z-10" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4" id="typed-name"></h1>
+                <p class="text-xl md:text-2xl text-cyan-400 mt-4 animate-pulse">Software Developer</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 px-8 bg-gray-800">
+            <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-8 text-center" data-aos="slide-up">About Me</h2>
+            <div class="max-w-4xl mx-auto card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg">Experienced Software Developer with over 6 years of expertise in designing, developing, and optimizing robust applications using ASP.NET Core, Dapper, SQL Server, and RESTful APIs. I specialize in clean architecture, microservices, and delivering secure, scalable solutions with a passion for performance optimization and innovative problem-solving.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 px-8 bg-gray-900">
+            <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-8 text-center" data-aos="slide-up">Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="slide-right" data-aos-delay="100">
+                    <h3 class="text-xl md:text-2xl font-semibold">Software Developer | Aether Industries Limited</h3>
+                    <p class="text-gray-300 italic">July 2023 - Present</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2">
+                        <li>Enhanced AIRIS with ASP.NET MVC, AngularJS, and SQL, reducing loan processing by 40%.</li>
+                        <li>Developed multidimensional Crystal Reports for management analytics.</li>
+                        <li>Optimized SQL queries, cutting execution time by 30%.</li>
+                    </ul>
+                </div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="slide-right" data-aos-delay="200">
+                    <h3 class="text-xl md:text-2xl font-semibold">IT Specialist | Weavetech Engineers Limited</h3>
+                    <p class="text-gray-300 italic">March 2020 - May 2023</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2">
+                        <li>Led CRM development with ASP.NET MVC and Web API.</li>
+                        <li>Automated lead-to-deal workflows, improving conversion rates.</li>
+                    </ul>
+                </div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="slide-right" data-aos-delay="300">
+                    <h3 class="text-xl md:text-2xl font-semibold">EDP Incharge | Bhagwati Gourmet Food LLP</h3>
+                    <p class="text-gray-300 italic">March 2018 - March 2020</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2">
+                        <li>Built a Catering Web App for resource optimization.</li>
+                        <li>Reduced app response time by 25% via refactoring.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 px-8 bg-gray-800">
+            <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-8 text-center" data-aos="slide-up">Projects</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl md:text-2xl font-semibold">E-commerce Platform API</h3>
+                    <p class="mt-2">Built a RESTful API with ASP.NET Core, JWT authentication, and SQL Server for seamless user and order management.</p>
+                </div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl md:text-2xl font-semibold">UHF Tracking System</h3>
+                    <p class="mt-2">Designed an asset tracking system using ASP.NET MVC Core, Dapper, and SQL Server, optimizing data latency.</p>
+                </div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl md:text-2xl font-semibold">Machine Costing Web App</h3>
+                    <p class="mt-2">Developed a costing app with ASP.NET MVC and Web API for precise financial decision-making.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="py-16 px-8 bg-gray-900">
+            <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-8 text-center" data-aos="slide-up">Tech Stack</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="100"><strong class="text-pink-500">Languages:</strong> C#, SQL, JavaScript, Python, Java, PHP</div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="200"><strong class="text-pink-500">Frameworks:</strong> ASP.NET Core, MVC, Dapper ORM, Entity Framework, AngularJS</div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="300"><strong class="text-pink-500">Databases:</strong> SQL Server, T-SQL, Stored Procedures, Optimization</div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="400"><strong class="text-pink-500">API & Web:</strong> RESTful API, JSON, JWT Authentication, AJAX</div>
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="500"><strong class="text-pink-500">Tools:</strong> Visual Studio, GitHub, Android Studio, Crystal Reports</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 px-8 bg-gray-800">
+            <h2 class="text-3xl md:text-4xl font-bold text-cyan-400 mb-8 text-center" data-aos="slide-up">Contact</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="card p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <p>Email: <a href="mailto:hbhathiyara1010@gmail.com" class="text-pink-500 hover:text-cyan-400 transition-colors">hbhathiyara1010@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+917016240376" class="text-pink-500 hover:text-cyan-400 transition-colors">+91-7016240376</a></p>
+                    <p>Address: 15-A Madina Residency, Olpad, Surat</p>
+                </div>
+                <button class="block mx-auto bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-8 rounded-full font-semibold transform transition-all duration-300 hover:scale-110 hover:from-purple-500 hover:to-cyan-500" data-aos="zoom-in" data-aos-delay="400">Say Hello</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 py-4 text-center">
+        <p>© 2025 Jafar Bhathiyara | <a href="mailto:hbhathiyara1010@gmail.com" class="text-cyan-400 hover:text-pink-500 transition-colors">hbhathiyara1010@gmail.com</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
