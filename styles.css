@@ -11,36 +11,36 @@ html {
 /* CSS Variables for theming */
 :root {
     /* Dark Mode (default) */
-    --bg-body: #111827; /* bg-gray-900 */
-    --bg-section: #1f2937; /* bg-gray-800 */
-    --bg-section-alt: #111827; /* bg-gray-900 */
+    --bg-body: #111827;
+    --bg-section: #1f2937;
+    --bg-section-alt: #111827;
     --bg-sidebar: linear-gradient(to bottom, #1f2937, #111827);
     --bg-home: linear-gradient(135deg, #1f2937, #111827, #6b7280);
     --bg-footer: linear-gradient(to right, #111827, #1f2937);
-    --text-primary: #fff; /* White */
-    --text-secondary: #f3f4f6; /* Light gray */
-    --text-muted: #d1d5db; /* Gray-300 */
-    --card-bg: linear-gradient(135deg, #0891b2, #7c3aed); /* Cyan to Purple */
+    --text-primary: #fff;
+    --text-secondary: #f3f4f6;
+    --text-muted: #d1d5db;
+    --card-bg: linear-gradient(135deg, #0891b2, #7c3aed);
     --card-shadow: 0 4px 15px rgba(0, 230, 255, 0.3);
     --card-hover-shadow: 0 0 25px rgba(236, 72, 153, 0.7);
-    --link-hover: #00e6ff; /* Cyan */
+    --link-hover: #00e6ff;
 }
 
 :root[data-theme="light"] {
-    /* Light Mode (Updated) */
-    --bg-body: linear-gradient(135deg, #dbeafe, #ede9fe); /* Blue-100 to Purple-100 */
-    --bg-section: #eff6ff; /* Blue-50 */
-    --bg-section-alt: #f8fafc; /* Slate-50 */
-    --bg-sidebar: linear-gradient(to bottom, #e0f2fe, #ddd6fe); /* Light blue to light purple */
+    /* Light Mode */
+    --bg-body: linear-gradient(135deg, #dbeafe, #ede9fe);
+    --bg-section: #eff6ff;
+    --bg-section-alt: #f8fafc;
+    --bg-sidebar: linear-gradient(to bottom, #e0f2fe, #ddd6fe);
     --bg-home: linear-gradient(135deg, #dbeafe, #f8fafc, #ede9fe);
     --bg-footer: linear-gradient(to right, #e0f2fe, #e5e7eb);
-    --text-primary: #1e293b; /* Dark blue-gray */
-    --text-secondary: #1e293b; /* Dark blue-gray */
-    --text-muted: #64748b; /* Slate-500 */
-    --card-bg: linear-gradient(135deg, #06b6d4, #4f46e5); /* Cyan-500 to Indigo-500 */
-    --card-shadow: 0 4px 15px rgba(0, 102, 255, 0.3); /* Softer blue glow */
-    --card-hover-shadow: 0 0 25px rgba(236, 72, 153, 0.5); /* Neon pink */
-    --link-hover: #7c3aed; /* Purple-600 */
+    --text-primary: #1e293b;
+    --text-secondary: #1e293b;
+    --text-muted: #64748b;
+    --card-bg: linear-gradient(135deg, #06b6d4, #4f46e5);
+    --card-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+    --card-hover-shadow: 0 0 25px rgba(236, 72, 153, 0.5);
+    --link-hover: #7c3aed;
 }
 
 /* Apply variables */
@@ -56,7 +56,7 @@ body {
 }
 
 #sidebar.collapsed {
-    width: 5rem;
+    width: 4rem; /* Slightly smaller on mobile */
 }
 
 #sidebar.collapsed span {
@@ -74,7 +74,7 @@ body {
 }
 
 .nav-link.active {
-    color: #8b5cf6; /* Purple for active link */
+    color: #8b5cf6;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
 }
@@ -100,6 +100,8 @@ section {
     background: var(--card-bg);
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow-hidden;
+    word-wrap: break-word;
 }
 
 .card:hover {
@@ -124,11 +126,11 @@ section {
 }
 
 .text-cyan-400 {
-    color: #00e6ff; /* Consistent cyan across themes */
+    color: #00e6ff;
 }
 
 .text-pink-500 {
-    color: #ec4899; /* Consistent pink across themes */
+    color: #ec4899;
 }
 
 footer {
@@ -140,22 +142,41 @@ a:hover {
 }
 
 /* Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     main {
-        margin-left: 5rem;
+        margin-left: 4rem; /* Match collapsed sidebar */
     }
     #sidebar {
-        width: 5rem;
+        width: 4rem;
     }
     #sidebar span {
         display: none;
     }
+    .card {
+        padding: 1rem; /* Smaller padding on mobile */
+    }
+    .card h3 {
+        font-size: 1.125rem; /* 18px on mobile */
+    }
+    .card p, .card li {
+        font-size: 0.875rem; /* 14px on mobile */
+    }
+    .list-disc {
+        padding-left: 1rem; /* Reduce padding for lists */
+    }
 }
 
-/* Particle container */
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+@media (min-width: 640px) and (max-width: 768px) {
+    main {
+        margin-left: 5rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        margin-left: 16rem; /* Match full sidebar */
+    }
 }
